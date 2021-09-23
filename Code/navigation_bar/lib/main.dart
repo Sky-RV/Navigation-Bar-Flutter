@@ -19,12 +19,12 @@ void main() {
               children: <Widget>[
 
                 UserAccountsDrawerHeader(
-                  accountName: Text(myName, style: TextStyle(fontSize: 20),),
-                  accountEmail: Text(myEmail, style: TextStyle(fontSize: 18),),
+                  accountName: Text(myName, style: TextStyle(fontSize: 18),),
+                  accountEmail: Text(myEmail, style: TextStyle(fontSize: 14),),
 
                   currentAccountPicture: CircleAvatar(
 
-                    backgroundColor: Colors.grey,
+                    backgroundColor: Colors.white,
                     child: Text(myName[0], style: TextStyle(fontSize: 30),),
 
                   ),
@@ -51,6 +51,46 @@ void main() {
 
                 ),
 
+                ListTile(
+                  title: Text("New Group"),
+                  leading: Icon(Icons.group),
+                ),
+
+                ListTile(
+                  title: Text("Contacts"),
+                  leading: Icon(Icons.person),
+                ),
+
+                ListTile(
+                  title: Text("Calls"),
+                  leading: Icon(Icons.call),
+                ),
+
+                ListTile(
+                  title: Text("People Nearby"),
+                  leading: Icon(Icons.map_outlined),
+                ),
+
+                ListTile(
+                  title: Text("Saved Massages"),
+                  leading: Icon(Icons.bookmark),
+                ),
+
+                ListTile(
+                  title: Text("Settings"),
+                  leading: Icon(Icons.settings),
+                ),
+
+                ListTile(
+                  title: Text("Invite Friends"),
+                  leading: Icon(Icons.person_add),
+                ),
+
+                ListTile(
+                  //title: Text("Features"), // I couldn't find the 'about' icon
+                  title: Text("Log out"),
+                  leading: Icon(Icons.exit_to_app),
+                )
 
               ],
 
@@ -61,23 +101,15 @@ void main() {
           appBar: AppBar(
 
             title: Text("Navigation Bar"),
+            backgroundColor: Colors.yellow,
 
           ),
 
-          body: Column(
+          body: Center(
 
-            children: <Widget>[
+            child: Text("Welcome", style: TextStyle(color: Colors.red, fontSize: 40),),
 
-              Text("Welcome", style: TextStyle(fontSize: 40, color: Colors.indigo),),
-
-              Padding(
-                  padding:  EdgeInsets.all(8.0),
-                  child: Text("This is a test.", style: TextStyle(fontSize: 20),),
-              )
-
-            ],
-
-          ),
+          )
 
         ),
 
